@@ -64,13 +64,7 @@ function App(): React.JSX.Element {
               headerShown: false,
             }}
           />
-          <Stack.Screen
-            name="Product"
-            component={ProductOverView}
-            options={{
-              headerShown: false,
-            }}
-          />
+          <Stack.Screen name="Product" component={ProductOverView} />
         </Stack.Navigator>
       </PaperProvider>
       {/* </StoreProvider> */}

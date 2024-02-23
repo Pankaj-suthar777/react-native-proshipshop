@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
   },
   outerContainer: {
     margin: 12,
+    backgroundColor: 'white',
   },
   conatinerRating: {
     paddingTop: 10,

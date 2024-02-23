@@ -1,5 +1,5 @@
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 const Rating = ({value, text, size, style}) => {
@@ -50,7 +50,8 @@ const Rating = ({value, text, size, style}) => {
           <Icon name="star-o" size={size} color="#7BC17E" />
         )}
       </View>
-      {/* <View>{text && text}</View> */}
+
+      <Text style={styles.ratingText}>{text && text}</Text>
     </View>
   );
 };
@@ -66,6 +67,12 @@ const styles = StyleSheet.create({
   },
   rating: {
     flexDirection: 'row',
+
+    alignItems: 'center',
+  },
+  ratingText: {
+    marginLeft: 10,
+    fontSize: 15,
   },
 });
 
