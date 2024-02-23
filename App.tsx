@@ -16,9 +16,9 @@ function BottomTab() {
   return (
     <BottomTabs.Navigator
       screenOptions={({navigation}) => ({
-        headerStyle: {backgroundColor: '#a2d3a4'},
+        headerStyle: {backgroundColor: '#d6c8fd'},
         headerTintColor: 'white',
-        tabBarStyle: {backgroundColor: '#a2d3a4', height: 60},
+        tabBarStyle: {backgroundColor: '#d6c8fd', height: 60},
         tabBarActiveTintColor: '#0C0404',
         // headerRight: ({tintColor}) => (
         //   <AddExpenseButton navigation={navigation} tintColor={tintColor} />
@@ -43,7 +43,7 @@ function BottomTab() {
           title: 'Profile',
           tabBarLabel: 'Profile',
           tabBarIcon: ({color, size}) => {
-            return <Icon name="calendar" size={size} color={color} />;
+            return <Icon name="user" size={size} color={color} />;
           },
         }}
       />

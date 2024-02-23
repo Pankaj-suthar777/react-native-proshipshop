@@ -1,6 +1,6 @@
 import React from 'react';
 import {Pressable, StyleSheet, View} from 'react-native';
-import {Button, Card, Text} from 'react-native-paper';
+import {Button, Card, Divider, Text} from 'react-native-paper';
 import Rating from './Rating';
 import {useNavigation} from '@react-navigation/native';
 
@@ -30,10 +30,17 @@ const Product = ({product}) => {
             />
           </View>
           <Card.Content style={styles.content}>
-            <Text variant="headlineSmall">${product.price}</Text>
-            <Text style={styles.conatinerRating} variant="bodyMedium">
-              <Rating size={22} value={product.rating} />
-            </Text>
+            <Divider style={{marginBottom: 12}} />
+            <View style={styles.priceReviewContainer}>
+              <View>
+                <Text variant="headlineSmall">${product.price}</Text>
+              </View>
+              <View>
+                <Text style={styles.conatinerRating} variant="bodyMedium">
+                  <Rating color="#7BC17E" size={22} value={product.rating} />
+                </Text>
+              </View>
+            </View>
           </Card.Content>
         </View>
       </Pressable>
@@ -42,6 +49,11 @@ const Product = ({product}) => {
 };
 
 const styles = StyleSheet.create({
+  priceReviewContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   cardItem: {
     borderRadius: 16,
   },
@@ -50,6 +62,7 @@ const styles = StyleSheet.create({
   },
   container: {
     marginVertical: 8,
+    padding: 6,
     marginHorizontal: 12,
     height: 200,
   },
@@ -61,11 +74,9 @@ const styles = StyleSheet.create({
     marginVertical: 6,
   },
   outerContainer: {
+    padding: 6,
     margin: 12,
     backgroundColor: 'white',
-  },
-  conatinerRating: {
-    paddingTop: 10,
   },
 });
 
